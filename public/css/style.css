@@ -1,0 +1,16 @@
+body {
+  padding: 50px;
+  background-color: #F4F4F4;
+  font-family: Arial;  
+}
+
+.navbar {
+	color:#999;	
+}
+
+.navbar-inner {
+	background: #444C4F url("/img/header-bkgnd.png") repeat-x;
+	color:#EEE;
+	border-radius: 10px;	
+}
+
