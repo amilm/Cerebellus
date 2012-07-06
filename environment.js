@@ -1,4 +1,4 @@
-module.exports.appName = "clog",
+module.exports.appName = "Cerebellus",
 module.exports.db = {
-    URL: 'mongodb://localhost:27017/clog'
+    URL: 'mongodb://localhost:27017/blog'
 }
