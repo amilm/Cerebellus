@@ -10,9 +10,9 @@ module.exports.useModel = function (modelName) {
     var checkConnectionExists = (mongoose.connection.readyState === 1 || mongoose.connection.readyState === 2);
     if(!checkConnectionExists)
         mongoose.connect(environment.db.URL);
-    return require("./models/" + modelName)(mongoose);
+    return require("./app/models/" + modelName)(mongoose);
 };
 
 module.exports.useModule = function (moduleName) {
-    return require("./modules/" + moduleName);
+    return require("./app/modules/" + moduleName);
 };

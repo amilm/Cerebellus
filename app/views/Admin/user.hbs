@@ -1,0 +1,41 @@
+
+<div id="grid" style="height: 380px"></div>
+<script type="text/javascript">
+$(document).ready(function () {
+	dataSource = new kendo.data.DataSource({
+		transport: {
+			read:  {
+				url: "/Admin/Users",
+				dataType: "jsonp"
+			},
+			update:{
+				url: "/Admin/User/Create"
+				dataType: "jsonp"
+			},
+			destroy: {
+				url: "/Admin/User/Delete"
+				dataType: "jsonp"
+			}
+		}
+	})
+})
+
+
+
+$(document).ready(function() {
+	$("#grid").kendoGrid({
+		dataSource: {
+			data: {{{users}}},			
+			pageSize: 10
+		},
+		pageable: true,
+		height: 400,
+		toolbar: ["create"],
+		columns: [{field: "username",width: 100,title: "User Name"},
+				   {field: "email", width: 100, title: "Email"},
+				   {command: ["edit", "destroy"], title: "&nbsp;", width: "0px"}],
+		editable: "popup"		
+	});
+
+});
+</script>
